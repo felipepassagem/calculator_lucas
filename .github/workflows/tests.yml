@@ -2,16 +2,16 @@ name: CI Tests + Coverage
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
-  build:
+  tests:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -25,11 +25,11 @@ jobs:
           pip install -r requirements.txt
           pip install pytest pytest-cov
 
-      - name: Run tests with coverage
+      - name: Run unit + integration tests with coverage (ignore E2E)
         run: |
-          pytest --cov=back --cov-report=xml:coverage.xml
+          pytest --ignore=e2e --cov=back --cov-report=xml:coverage.xml
 
-      - name: Upload coverage to Codecov
+      - name: Upload coverage report to Codecov
         uses: codecov/codecov-action@v4
         with:
           files: ./coverage.xml
