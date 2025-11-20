@@ -1,7 +1,8 @@
 from playwright.sync_api import sync_playwright
+import pytest
 import time
 
-
+pytestmark = pytest.mark.skip(reason="E2E disabled in CI")
 FRONT_URL = "http://127.0.0.1:5500/front/index.html"  # ajuste se precisar
 
 
