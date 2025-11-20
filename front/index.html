@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="calculator">
+    <header class="calc-header">
+      <span>Calculadora</span>
+      <span class="calc-mode">Padrão</span>
+    </header>
+
+    <div class="display">
+      <div class="display-expression" id="display-expression"></div>
+      <div class="display-result" id="display-result">0</div>
+    </div>
+
+<div class="buttons">
+  <!-- linha 1 -->
+  <button class="btn btn-func" data-action="clear">C</button>
+  <button class="btn btn-op" data-op="sqrt">√</button>
+  <button class="btn btn-op" data-op="^">xʸ</button>
+  <button class="btn btn-op" data-op="/">÷</button>
+
+  <!-- linha 2 -->
+  <button class="btn" data-num="7">7</button>
+  <button class="btn" data-num="8">8</button>
+  <button class="btn" data-num="9">9</button>
+  <button class="btn btn-op" data-op="*">×</button>
+
+  <!-- linha 3 -->
+  <button class="btn" data-num="4">4</button>
+  <button class="btn" data-num="5">5</button>
+  <button class="btn" data-num="6">6</button>
+  <button class="btn btn-op" data-op="-">−</button>
+
+  <!-- linha 4 -->
+  <button class="btn" data-num="1">1</button>
+  <button class="btn" data-num="2">2</button>
+  <button class="btn" data-num="3">3</button>
+  <button class="btn btn-op" data-op="+">+</button>
+
+  <!-- linha 5 -->
+  <button class="btn btn-zero" data-num="0">0</button>
+  <button class="btn" data-num=".">,</button>
+  <button class="btn btn-equal" data-action="equal">=</button>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
